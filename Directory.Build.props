@@ -32,6 +32,9 @@
 
     <!-- All the .NET TFMs we're testing against -->
     <TestNetCoreTargetFrameworks>$(NetCoreTargetFrameworks)</TestNetCoreTargetFrameworks>
+
+    <!-- PackageReference System.Text.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary. -->
+    <NoWarn>$(NoWarn);NU1510</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
